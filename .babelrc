@@ -1,0 +1,41 @@
+{
+  "presets": [
+    [
+      "airbnb",
+      {
+        "removePropTypes": false
+      }
+    ],
+    [
+      "env",
+      {
+        "loose": true,
+        "uglify": true,
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-runtime"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        ["styled-components", {
+          "ssr": false,
+          "minify": true,
+          "displayName": true
+        }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        ["styled-components", {
+          "ssr": false,
+          "minify": true,
+          "displayName": false
+        }]
+      ]
+    }
+  }
+}
